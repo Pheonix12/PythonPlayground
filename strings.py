@@ -191,15 +191,15 @@ name = "Alice"
 age = 25
 
 # Method 1: f-strings (modern, recommended - Python 3.6+)
-print(f"My name is {name} and I am {age} years old")
-print(f"Next year I'll be {age + 1}")
+print(f"My name is {name} and I am {age} years old")  # Output: My name is Alice and I am 25 years old
+print(f"Next year I'll be {age + 1}")  # Output: Next year I'll be 26
 
 # Method 2: format() method
-print("My name is {} and I am {} years old".format(name, age))
-print("My name is {0} and I am {1} years old. {0} is my first name.".format(name, age))
+print("My name is {} and I am {} years old".format(name, age))  # Output: My name is Alice and I am 25 years old
+print("My name is {0} and I am {1} years old. {0} is my first name.".format(name, age))  # Output: My name is Alice and I am 25 years old. Alice is my first name.
 
 # Method 3: % formatting (old style)
-print("My name is %s and I am %d years old" % (name, age))
+print("My name is %s and I am %d years old" % (name, age))  # Output: My name is Alice and I am 25 years old
 
 
 # ============================================
@@ -235,13 +235,13 @@ sample_string = "Python"
 
 # Get all methods and attributes available on a string
 all_methods = dir(sample_string)
-print("All string methods and attributes:")
-print(all_methods)
+print("All string methods and attributes:")  # Output: All string methods and attributes:
+print(all_methods)  # Output: ['__add__', '__class__', ... (long list of all methods including private ones)]
 
 # Filter out private/magic methods (those starting with underscore)
 public_methods = [method for method in dir(sample_string) if not method.startswith('_')]
-print("\nPublic string methods only:")
-print(public_methods)
+print("\nPublic string methods only:")  # Output: (blank line) Public string methods only:
+print(public_methods)  # Output: ['capitalize', 'casefold', 'center', 'count', 'encode', ... (list of public methods)]
 # Output will include: capitalize, casefold, center, count, encode, endswith,
 # expandtabs, find, format, format_map, index, isalnum, isalpha, isascii,
 # isdecimal, isdigit, isidentifier, islower, isnumeric, isprintable, isspace,
@@ -250,19 +250,19 @@ print(public_methods)
 # split, splitlines, startswith, strip, swapcase, title, translate, upper, zfill
 
 # You can also use dir() on the str class itself
-print("\nMethods from str class:")
-print([method for method in dir(str) if not method.startswith('_')])
+print("\nMethods from str class:")  # Output: (blank line) Methods from str class:
+print([method for method in dir(str) if not method.startswith('_')])  # Output: ['capitalize', 'casefold', 'center', ... (same list as above)]
 
 # Using help() to get detailed information about a specific method
-print("\n" + "="*50)
-print("Help for the upper() method:")
-print("="*50)
-help(str.upper)
+print("\n" + "="*50)  # Output: (blank line) ==================================================
+print("Help for the upper() method:")  # Output: Help for the upper() method:
+print("="*50)  # Output: ==================================================
+help(str.upper)  # Output: Displays detailed help documentation for the upper() method
 
-print("\n" + "="*50)
-print("Help for the replace() method:")
-print("="*50)
-help(str.replace)
+print("\n" + "="*50)  # Output: (blank line) ==================================================
+print("Help for the replace() method:")  # Output: Help for the replace() method:
+print("="*50)  # Output: ==================================================
+help(str.replace)  # Output: Displays detailed help documentation for the replace() method
 
 
 # ============================================
